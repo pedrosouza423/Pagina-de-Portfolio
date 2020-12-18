@@ -1,28 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --color-green: rgb(47, 255, 57);;
+}
 
 *{
     margin: 0;
-    border: 0;
     padding: 0;
+    border: 0;
 }
 body{
     background-color: #282a36;
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
-/* Menu */
+
+/* Menu do site */
 header{
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 22px;
     border-bottom: 1px solid #333;
+    background-color: rgba(0, 0, 0, 0.1);
+    
 }
-header div{
+
+.links{
     text-align: center;
 }
-header div a{
-    margin: 0 30px;
-    color: white;
+
+.links a{
     text-decoration: none;
+    color: white;
+    margin: 0 16px;
+    font-size: 18px;
+    line-height: 28px;
 }
-header div a:hover{
-    color: slateblue;
-    transition: color 400ms;
+
+.links a:hover{
+    color: var(--color-green);
+    transition: color 500ms;
+}
+
+/* Wrapper */
+#wrapper{
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img{
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1{
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p{
+    max-width: 500px;
+    margin: 22px auto;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#wrapper a{
+    color: var(--color-green);
+}
+
+/* Footer */
+#links-footer a{
+    border-bottom: 1px solid var(--color-green);
+}
