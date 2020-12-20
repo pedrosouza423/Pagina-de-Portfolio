@@ -88,6 +88,9 @@ header{
 .cards{
     max-width: 800px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .card{
@@ -102,6 +105,42 @@ header{
     padding: 24px;
 }
 
+.card-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .card-price{
-    text-align: right;
+    background-color: var(--color-rocketseat);
+    filter: brightness(80%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+
+/* MODAL */
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.modal{
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute;
+    right: 1vh;
+    top: 1vh;
+    cursor: pointer;
 }
