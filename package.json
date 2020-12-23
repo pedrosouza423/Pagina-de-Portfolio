@@ -1,0 +1,25 @@
+{
+  "name": "Pagina-de-Portfolio",
+  "version": "1.0.0",
+  "description": "Página criada para fins de fixação do conteúdo aprendido no curso LaunchBase da Rocketseat",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrosouza423/Pagina-de-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrosouza423/Pagina-de-Portfolio/issues"
+  },
+  "homepage": "https://github.com/pedrosouza423/Pagina-de-Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "nunjucks": "^3.2.2"
+  }
+}
