@@ -16,12 +16,26 @@ server.set("view engine", "njk")
 
 //Configuração Nunjucks
 nunjucks.configure("views", {
-    express:server
+    express:server,
+    autoescape:false
 })
 
 //Criando rota get para o servidor
 server.get("/", function(req, res){
-    return res.render('about')
+    const about = {
+        avatar_url: 'https://avatars1.githubusercontent.com/u/62824231?s=400&u=272b848fa2105baa1587c5fc571f2294c2a74445&v=4',
+        name:'Pedro Souza',
+        role:'Engenheiro de Software',
+        description:'<a href="https://github.com/pedrosouza423" target="_blank">Programador Full-Stack</a> focado em sempre melhorar as habilidades.',
+        links: [
+            {name: 'Github', url:'https://github.com/pedrosouza423'},
+            {name: 'Instagram', url:'"https://www.instagram.com/pedro.souza423/'},
+            {name: 'LinkedIn', url:'https://www.linkedin.com/in/pedrohfsouza/'}
+
+        ]
+    }
+
+    return res.render('about', {about})
 })
 
 server.get("/portfolio", function(req, res){

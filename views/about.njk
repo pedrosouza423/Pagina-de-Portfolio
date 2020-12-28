@@ -1,20 +1,25 @@
 {% extends "layout.njk" %}
 
+{% block head %}
+<title>Sobre - {{about.name}}</title>
+{% endblock %}
+
 {% block content %}
     
     <!--Wrapper-->
     <div id="wrapper">
-        <img src="https://avatars1.githubusercontent.com/u/62824231?s=400&u=272b848fa2105baa1587c5fc571f2294c2a74445&v=4" alt="Pedro Souza">
-        <h1>Pedro Souza</h1>
-        <h2>Engenheiro de Software</h2>
-        <p><a href="https://github.com/pedrosouza423" target="_blank">Programador Full-Stack</a> focado em sempre melhorar as habilidades.</p>
+        <img src="{{about.avatar_url}}" alt="Imagem de {{about.name}}">
+        <h1>{{about.name}}</h1>
+        <h2>{{about.role}}</h2>
+        <p>{{about.description}}</p>
         
     </div>
 
     <!--Footer-->
     <div id="links-footer" class="links">
-        <a href="https://github.com/pedrosouza423" target="_blank">Github</a>
-        <a href="https://www.instagram.com/pedro.souza423/" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/in/pedrohfsouza/" target="_blank">Linkedin</a>
+        {% for link in about.links %}
+         <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+        {% endfor %}
+
     </div>
 {% endblock %}
