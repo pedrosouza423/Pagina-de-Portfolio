@@ -5,6 +5,9 @@ const nunjucks = require('nunjucks')
 //Criando a o server e atribuindo-lhe o express
 const server = express()
 
+//Importando dados que foram criados
+const videos = require('./data')
+
 //Parte estática da página
 server.use(express.static('public'))
 
@@ -21,8 +24,8 @@ server.get("/", function(req, res){
     return res.render('about')
 })
 
-server.get("/classes", function(req, res){
-    return res.render('classes')
+server.get("/portfolio", function(req, res){
+    return res.render('portfolio', {items: videos})
 })
 
 //Rodar o servidor
