@@ -3,7 +3,8 @@ module.exports = [
         id: 'HN1UjzRSdBk',
         title: 'Desvendando o CSS Grid na prática | Mayk Brito',
         duration: '36 min',
-        price: 'FREE'
+        price: 'FREE',
+        featured: true
     },
     {
         id: 'GykTLqODQuU',
@@ -15,7 +16,9 @@ module.exports = [
         id: '2alg7MQ6_sI',
         title: 'Como usar Git e Github na prática: Guia para iniciantes | Mayk Brito',
         duration: '33 min',
-        price: 'FREE'
+        price: 'FREE',
+        featured: true
+
     },
     {
         id: 'GSqR2i-Pq6o',

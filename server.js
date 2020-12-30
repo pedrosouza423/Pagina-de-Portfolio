@@ -17,7 +17,8 @@ server.set("view engine", "njk")
 //Configuração Nunjucks
 nunjucks.configure("views", {
     express:server,
-    autoescape:false
+    autoescape:false,
+    noCache:true
 })
 
 //Criando rota get para o servidor
