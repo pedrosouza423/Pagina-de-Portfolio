@@ -24,7 +24,8 @@ module.exports = [
         id: 'GSqR2i-Pq6o',
         title: 'Desvendando a variável this no Javascript | Mayk Brito',
         duration: '48 min',
-        price: 'FREE'
+        price: 'FREE',
+        featured: true
     },
     {
         id: 'rAzHvYnQ8DY',
