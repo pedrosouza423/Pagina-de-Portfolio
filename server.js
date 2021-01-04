@@ -39,16 +39,16 @@ server.get("/", function(req, res){
     return res.render('about', {about})
 })
 
-server.get("/portfolio", function(req, res){
+server.get('/portfolio', function(req, res){
     return res.render('portfolio', {items: videos})
 })
 
 //Página de video
-server.get("/video", function(req, res){
+server.get('/video', function(req, res){
     const id = req.query.id
 
     const video = videos.find(function(video){
-        if(video.id === id){
+        if(video.id == id){
             return true
         }
     })
@@ -57,8 +57,7 @@ server.get("/video", function(req, res){
         return res.send('Video not found')
     }
 
-    res.render('video', {item:video} )
-    
+    return res.render('video',{item: video})
 })
 
 //Rodar o servidor
