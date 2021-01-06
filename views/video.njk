@@ -6,7 +6,7 @@
 
 {% block content %}
     <!--Wrapper-->
-    <div id="wrapper">
+    <div id="wrapper" class="video">
         <h1>{{item.title}}</h1>
         
     </div>
@@ -15,11 +15,9 @@
     <section class="video">
 
         <div class="card" id="{{item.id}}">
-            <div class="card-image {{ 'featured-wrapper' if item.featured }}">
-                <img src="https://img.youtube.com/vi/{{item.id}}/mqdefault.jpg" alt="Imagem de {{item.title}}">
-                {% if item.featured %}
-                    <div class="featured">Featured</div>
-                {% endif %}
+            <div class="card-video">
+                <iframe src="https://www.youtube.com/embed/{{item.id}}" frameborder="0"></iframe>
+
             </div>
     
             <div class="card-conteudo">
